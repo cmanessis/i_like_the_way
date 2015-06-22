@@ -16,3 +16,9 @@ post '/submit' do
 
   File.read('./views/thoughts.erb.html')
 end
+
+get '/submit' do
+  @thought = params[:thoughts]
+
+  File.read('./views/thoughts.erb.html')
+end
