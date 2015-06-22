@@ -4,7 +4,6 @@ require 'koala'
 set :protection, :except => :frame_options
 set :views, 'views'
 get '/' do
-  # @@graph = Koala::Facebook::GraphAPI.new
   erb :index
 end
 
@@ -14,5 +13,6 @@ end
 
 post '/submit' do
   @thought = params[:thoughts]
-  erb :thoughts
+
+  File.read('./views/thoughts.erb.html')
 end
